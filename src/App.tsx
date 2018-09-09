@@ -9,8 +9,6 @@ import logo3 from './scattered_clouds.png'
 import logo4 from './shower-rain.png';
 import logo2 from './sunny.png';
 
-
-
 interface IState {
   city: any,
   description: any,
@@ -70,7 +68,12 @@ class App extends React.Component<{}, IState>{
     }
     else if (this.state.description === 'scattered clouds'){
       this.setState({
-        weather: <img src={logo3} height='20px' width='20px'/>
+        weather: <img src={logo3} height='40px' width='40px'/>
+      })
+    }
+    else if (this.state.description === 'broken clouds'){
+      this.setState({
+        weather: <img src={logo3} height='40px' width='40px'/>
       })
     }
     else if (this.state.description === 'shower rain'){
