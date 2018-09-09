@@ -62,7 +62,7 @@ class App extends React.Component<{}, IState>{
     }
     else if (this.state.description === 'few clouds'){
       this.setState({
-        weather: <img src={logo1} height='20px' width='20px'/>
+        weather: <img src={logo1} height='45px' width='45px'/>
       })
     }
     else if (this.state.description === 'scattered clouds'){
@@ -75,9 +75,20 @@ class App extends React.Component<{}, IState>{
         weather: <img src={logo3} height='45px' width='45px'/>
       })
     }
+    else if (this.state.description === 'overcast clouds'){
+      this.setState({
+        weather: <img src={logo3} height='45px' width='45px'/>
+      })
+    }
+    
     else if (this.state.description === 'shower rain'){
       this.setState({
-        weather: <img src={logo4} height='20px' width='20px'/>
+        weather: <img src={logo4} height='40px' width='40px'/>
+      })
+    }
+    else if (this.state.description === 'light rain'){
+      this.setState({
+        weather: <img src={logo4} height='40px' width='40px'/>
       })
     }
   }
