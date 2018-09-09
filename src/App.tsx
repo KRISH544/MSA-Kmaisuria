@@ -6,6 +6,7 @@ import './App.css';
 import Form from './components/Form';
 import logo1 from './few_clouds.png';
 import logo3 from './scattered_clouds.png' 
+import logo4 from './shower-rain.png';
 import logo2 from './sunny.png';
 
 
@@ -70,6 +71,11 @@ class App extends React.Component<{}, IState>{
     else if (this.state.description === 'scattered clouds'){
       this.setState({
         weather: <img src={logo3} height='20px' width='20px'/>
+      })
+    }
+    else if (this.state.description === 'shower rain'){
+      this.setState({
+        weather: <img src={logo4} height='20px' width='20px'/>
       })
     }
   }
