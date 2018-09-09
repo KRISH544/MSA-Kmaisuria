@@ -88,7 +88,9 @@ class App extends React.Component<{}, IState>{
   public render() { 
     return (
       <div className="App">
+      
         <Form />
+        
         <form className="Input" onSubmit={this.getWeather}>
         <label>
            Enter a New Zealand city:
