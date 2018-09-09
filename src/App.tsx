@@ -1,5 +1,4 @@
 import Button from '@material-ui/core/Button';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import TextField from '@material-ui/core/TextField';
 import * as React from 'react';
 import './App.css';
@@ -90,7 +89,9 @@ class App extends React.Component<{}, IState>{
     return (
       <div className="App">
         <Form />
+       
         <form className="Input" onSubmit={this.getWeather}>
+
         <label >
            Enter a New Zealand city:
   <TextField type="text" name="name" value= {this.state.city} onChange={this.handleChange}/>
@@ -98,13 +99,13 @@ class App extends React.Component<{}, IState>{
         <Button onClick={this.getWeather} onChange={this.handleChange} variant="flat" type="submit" color="primary" size="large" aria-label="Add"  value="Get Weather">
   Search
   </Button>
-  <CircularProgress size="40" color="primary" aria-busy="true"/>
   <h1>{this.state.weather}</h1>
        <h1>{this.state.tempurature } {this.state.description} {this.state.error}</h1>
+      
         </form>
+        
       </div>
     );
   }
 }
-
 export default App;
