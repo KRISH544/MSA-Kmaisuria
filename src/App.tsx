@@ -67,12 +67,12 @@ class App extends React.Component<{}, IState>{
     }
     else if (this.state.description === 'scattered clouds'){
       this.setState({
-        weather: <img src={logo3} height='40px' width='40px'/>
+        weather: <img src={logo3} height='45px' width='45px'/>
       })
     }
     else if (this.state.description === 'broken clouds'){
       this.setState({
-        weather: <img src={logo3} height='40px' width='40px'/>
+        weather: <img src={logo3} height='45px' width='45px'/>
       })
     }
     else if (this.state.description === 'shower rain'){
@@ -89,10 +89,8 @@ class App extends React.Component<{}, IState>{
     return (
       <div className="App">
         <Form />
-       
         <form className="Input" onSubmit={this.getWeather}>
-
-        <label >
+        <label>
            Enter a New Zealand city:
   <TextField type="text" name="name" value= {this.state.city} onChange={this.handleChange}/>
   </label>
@@ -101,9 +99,7 @@ class App extends React.Component<{}, IState>{
   </Button>
   <h1>{this.state.weather}</h1>
        <h1>{this.state.tempurature } {this.state.description} {this.state.error}</h1>
-      
         </form>
-        
       </div>
     );
   }
