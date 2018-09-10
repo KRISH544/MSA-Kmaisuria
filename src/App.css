@@ -20,7 +20,8 @@
 }
 
 .App-title {
-    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8em;
 }
 
 .App-intro {
@@ -40,8 +41,12 @@
     padding-bottom: 16%;
     height: 250px;
     width: 100%;
-    background-color: rgb(96, 128, 177);
+    background-color: rgb(118, 154, 207);
     position: relative;
+}
+
+.headingStyle {
+    font-family: sans-serif;
 }
 
 @keyframes App-logo-spin {

@@ -15,7 +15,6 @@ interface IState {
   tempurature: any,
   weather: any
 }
-
 const ApiKey = "c059c5ceb5bf1370f8403c096730df45";
 class App extends React.Component<{}, IState>{
   constructor(props: any) {
@@ -26,7 +25,6 @@ class App extends React.Component<{}, IState>{
       error: undefined,
       tempurature: "",
       weather: ""
-
     }
     this.handleChange = this.handleChange.bind(this);
     this.getWeather = this.getWeather.bind(this);
@@ -57,38 +55,38 @@ class App extends React.Component<{}, IState>{
     }
     if (this.state.description === 'clear sky'){
       this.setState({
-        weather: <img src={logo2} height='40px' width='40px'/>
+        weather: <img src={logo2} height='55px' width='55px'/>
       })
     }
     else if (this.state.description === 'few clouds'){
       this.setState({
-        weather: <img src={logo1} height='45px' width='45px'/>
+        weather: <img src={logo1} height='60px' width='60px'/>
       })
     }
     else if (this.state.description === 'scattered clouds'){
       this.setState({
-        weather: <img src={logo3} height='45px' width='45px'/>
+        weather: <img src={logo3} height='60px' width='60px'/>
       })
     }
     else if (this.state.description === 'broken clouds'){
       this.setState({
-        weather: <img src={logo3} height='45px' width='45px'/>
+        weather: <img src={logo3} height='60px' width='60px'/>
       })
     }
     else if (this.state.description === 'overcast clouds'){
       this.setState({
-        weather: <img src={logo3} height='45px' width='45px'/>
+        weather: <img src={logo3} height='60px' width='60px'/>
       })
     }
     
     else if (this.state.description === 'shower rain'){
       this.setState({
-        weather: <img src={logo4} height='40px' width='40px'/>
+        weather: <img src={logo4} height='55px' width='55px'/>
       })
     }
     else if (this.state.description === 'light rain'){
       this.setState({
-        weather: <img src={logo4} height='40px' width='40px'/>
+        weather: <img src={logo4} height='55px' width='55px'/>
       })
     }
   }
@@ -106,10 +104,10 @@ class App extends React.Component<{}, IState>{
   <TextField className="textfield" type="text" name="name" value={this.state.city} onChange={this.handleChange}/>
   </label>&nbsp;&nbsp;
         <Button className="Input" onClick={this.getWeather} onChange={this.handleChange} variant="outlined" type="submit" color="secondary" size="large" value="Get Weather" >
-        Search
+        &nbsp;Search
   </Button>
   <h1>{this.state.weather}</h1>
-       <h1>{this.state.tempurature } {this.state.description} {this.state.error}</h1>
+       <h1 className="headingStyle">{this.state.tempurature } {this.state.description} {this.state.error}</h1>
         </form>
         </p>
         </div>
