@@ -32,8 +32,8 @@ class App extends React.Component<{}, IState>{
     this.getWeather = this.getWeather.bind(this);
   }
 
-  public getWeather = async (e: any) => {
-    e.preventDefault();
+  public getWeather = async (event: any) => {
+    event.preventDefault();
     const city = this.state.city;
     const ApiCall = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=`+ this.state.city + `,nz&appid=${ApiKey}&units=metric`);
     const data = await ApiCall.json();
@@ -92,28 +92,28 @@ class App extends React.Component<{}, IState>{
       })
     }
   }
-  
   public handleChange(event) {
     this.setState({city: event.target.value});
   }
   public render() { 
     return (
       <div className="App">
-      
         <Form />
-        
+        <p className="box">
         <form className="Input" onSubmit={this.getWeather}>
         <label>
-           Enter a New Zealand city:
-  <TextField type="text" name="name" value= {this.state.city} onChange={this.handleChange}/>
-  </label>
-        <Button onClick={this.getWeather} onChange={this.handleChange} variant="flat" type="submit" color="primary" size="large" aria-label="Add"  value="Get Weather">
-  Search
+           Enter a New Zealand location:&nbsp;
+  <TextField className="textfield" type="text" name="name" value={this.state.city} onChange={this.handleChange}/>
+  </label>&nbsp;&nbsp;
+        <Button className="Input" onClick={this.getWeather} onChange={this.handleChange} variant="outlined" type="submit" color="secondary" size="large" value="Get Weather" >
+        Search
   </Button>
   <h1>{this.state.weather}</h1>
        <h1>{this.state.tempurature } {this.state.description} {this.state.error}</h1>
         </form>
-      </div>
+        </p>
+        </div>
+      
     );
   }
 }
