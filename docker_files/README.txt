@@ -1,0 +1,1 @@
+The docker files are meant to be placed the next directory up from msa-kmaisuria
